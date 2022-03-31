@@ -1,0 +1,6 @@
+name 'welcome_message'
+description 'A cookbook for creating a welcome message after a SSH login'
+maintainer 'Maintainer'
+maintainer_email 'maintainer@example.com'
+license 'GNU GPLv3'
+version '1.0.0'
