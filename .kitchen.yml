@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-20.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[welcome_message::default]
+    verifier:
+      inspec_tests:
+        - cookbooks/welcome_message/test/integration/default
